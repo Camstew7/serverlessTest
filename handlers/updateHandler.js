@@ -1,4 +1,4 @@
-import request from 'superagent'
+const request = require('superagent')
 
 
 // make superAgent request and return promise

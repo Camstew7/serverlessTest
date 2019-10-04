@@ -16,8 +16,6 @@ service: serverlesstest
 #plugins
 plugins:
   - serverless-domain-manager
-
-# app and org for use with dashboard.serverless.com
 app: myapp
 org: camstew7
 
@@ -28,8 +26,9 @@ org: camstew7
 provider:
   name: aws
   runtime: nodejs10.x
-  evironment:
-    HAPI_API_URL: http://localhost:3000
+  environment:
+    TEST_HAPI_API_URL: "http://localhost:3000"
+    TEST: "test"
 
 # you can overwrite defaults here
 #  stage: dev
@@ -72,25 +71,30 @@ functions:
           path: api/data
           method: get
           cors: true
+
   create:
     handler: index.create
+    events:
       - http:
           path: api/data
           method: post
           cors: true
+
   update:
     handler: index.update
-        - http:
-          path: api/data
-          method: get
-          cors: true
+    events:
+      - http:
+        path: api/data
+        method: get
+        cors: true
+
   delete:
     handler: index.delete
-      events:
-        -http:
-          path: api/data
-          method: delete
-          cors: true
+    events:
+      - http:
+        path: api/data
+        method: delete
+        cors: true
 
   
   

@@ -1,0 +1,7 @@
+{
+  "path": "api/data",
+  "method": "get",
+  "body": {
+    "query": "1"
+  }
+}

@@ -1,7 +1,7 @@
-import createHandler from './handlers/createHandler.js'
-import readHandler from './handlers/readHandler.js'
-import updateHandler from './handlers/updateHandler.js'
-import deleteHandler from './handlers/deleteHandler.js'
+const createHandler = require('./handlers/createHandler')
+const readHandler = require('./handlers/readHandler.js')
+const updateHandler = require('./handlers/updateHandler.js')
+const deleteHandler = require('./handlers/deleteHandler.js')
 
 module.exports = {
   read: readHandler,

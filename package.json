@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "superagent": "^5.1.0"
+  },
+  "devDependencies": {
+    "serverless-domain-manager": "^3.3.0"
   }
 }

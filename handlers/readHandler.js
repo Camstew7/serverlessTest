@@ -1,11 +1,10 @@
-import request from 'superagent'
+const request = require('superagent')
 
 
 // make superAgent request and return promise
 module.exports = async (event) => {
   try {
-    let response = await request.get(`${process.env.HAPI_API_URL}/api/data/?query=${event.body.query}`)
-
+    let response = await request.get(`${process.env.TEST_HAPI_API_URL}/api/data`)
     return {
       statusCode: 200,
       headers : {
